@@ -1382,7 +1382,7 @@ process IGV {
 
     script: // scripts are bundled with the pipeline, in nf-core/chipseq/bin/
     """
-    touch *.txt > igv_files.txt
+    cat *.txt > igv_files.txt
     igv_files_to_session.py igv_session.xml igv_files.txt ../../reference_genome/${fasta.getName()} --path_prefix '../../'
     """
 }
